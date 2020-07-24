@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLOR CHANGE CHALLENGE</title>
+    <script src="https://kit.fontawesome.com/86a62bd63e.js" crossorigin="anonymous"></script>
+ 
+    <style>
+        button
+        {
+            padding: 0.5em 2em;
+            border-radius: 1em;
+            background-color: black;
+            color: white;
+            margin-top: 3%;
+            border: none;
+        }
+        .container
+        {
+            text-align: center;
+            margin-top: 10%;
+        }
+        body{
+            background-color: powderblue;
+        }
+        i{
+            font-size: 4em;
+            margin-bottom: 3%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <i class="fas fa-palette" id="icon"></i>
+        <h1 id="heading1">MAKE YOUR CUSTOM GRADIENT</h1>
+        <H2 id="heading2">CHOOSE COLORs</H2>
+        <input type="color" id="color1">
+        <input type="color" id="color2">
+        <br>
+        <button onclick="change()" id="change">CHANGE</button>
+    </div>
+
+    <script >
+       function change()
+        {
+        let bcolor1=document.querySelector("#color1").value;
+        let bcolor2=document.querySelector("#color2").value;
+
+        // background=linear-gradient(toright,pink, yellow);
+        document.body.style.background="linear-gradient(to right,"+bcolor1+","+bcolor2+")";
+        
+        document.querySelector("#heading1").style.color="white";
+        document.querySelector("#heading2").style.color="white";
+        document.querySelector("#icon").style.color="white";
+        
+        // change btn
+        document.querySelector("#change").style.backgroundColor="white";
+        document.querySelector("#change").style.color="black";
+        
+        }
+    </script>
+</body>
+</html>
